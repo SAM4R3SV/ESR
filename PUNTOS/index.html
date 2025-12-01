@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ESR — Tabla de Puntos y Rangos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" src="../LOGOS/ESR_mainLogo.jpg">ESR</div>
+      <div>
+        <h1>Tabla de Puntos y Rangos — E.S.R.</h1>
+        <p class="lead">Datos cargados desde <code>usuarios.json</code></p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="logo-area">
+        <div class="logo-placeholder" id="logoBox">LOGO</div>
+        <div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <input id="search" class="search" placeholder="Buscar usuario (ej. @al_sun)" />
+            <select id="rankFilter" class="filter">
+              <option value="all">Todos los rangos</option>
+            </select>
+            <select id="sort" class="sort">
+              <option value="desc">Orden: Puntos (mayor → menor)</option>
+              <option value="asc">Orden: Puntos (menor → mayor)</option>
+              <option value="name">Orden: Nombre (A → Z)</option>
+            </select>
+            <button id="reloadBtn" class="action-btn">Recargar datos</button>
+          </div>
+          <div style="margin-top:8px" class="small-note">Usa el filtro para ver solo un rango</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-card card">
+      <h3>Usuarios</h3>
+      <div id="summary" class="small-note" style="margin-bottom:10px">Cargando...</div>
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr>
+            <th style="width:40%">Usuario</th>
+            <th style="width:20%">Puntos</th>
+            <th style="width:30%">Rango</th>
+            <th style="width:10%">Acción</th>
+          </tr>
+        </thead>
+        <tbody id="usersTbody"></tbody>
+      </table>
+      <div id="emptyMsg" class="empty" style="margin-top:12px;display:none">No se encontraron usuarios con esos filtros.</div>
+    </section>
+
+    <section class="card table-card">
+      <h3>Rangos oficiales</h3>
+      <table id="ranksTable" style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr><th>Id</th><th>Nombre</th><th>Mín Puntos</th><th>Máx Puntos</th><th>Descripción</th></tr>
+        </thead>
+        <tbody id="ranksTbody"></tbody>
+      </table>
+    </section>
+
+    <footer style="margin-top:14px">
+      <div class="legal">Desarrollado por <span class="author">@samaresv</span></div>
+    </footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ESR — Menú de Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="description" content="Página de inicio ESR: acceso a exámenes y tabla de puntos." />
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="header">
+      <!-- Logo / Branding lateral -->
+      <div class="logo" aria-label="Logotipo ESR">ESR</div>
+      <div class="title">
+        <h1>Menú de Inicio — E.S.R.</h1>
+        <p class="lead">Accede a exámenes y a la tabla de puntos</p>
+      </div>
+    </header>
+
+    <!-- Secciones principales -->
+    <main id="home">
+      <!-- Sección Exámenes -->
+      <section class="card" aria-labelledby="examenes-title">
+        <div class="section-header">
+          <h2 id="examenes-title">Exámenes</h2>
+          <p class="section-desc">Selecciona un examen para comenzar</p>
+        </div>
+
+        <div class="grid">
+          <!-- Item examen: Constitución -->
+          <a class="item" href="./EXAMENES/examen-constitucion/index.html">
+            <div class="item-content">
+              <div class="item-title">Examen — Constitución (E.S.R.)</div>
+              <div class="item-desc">20 preguntas · Exportable a PDF y JSON</div>
+            </div>
+            <span class="item-badge">Disponible</span>
+          </a>
+
+          <!-- Para agregar más exámenes, duplica el bloque <a class="item"> y ajusta el href -->
+          <!--
+          <a class="item" href="./EXAMENES/examen-procedimientos/index.html">
+            <div class="item-content">
+              <div class="item-title">Examen — Procedimientos</div>
+              <div class="item-desc">Próximamente</div>
+            </div>
+            <span class="item-badge ghost">Próx.</span>
+          </a>
+          -->
+        </div>
+      </section>
+
+      <!-- Sección Tabla de Puntos -->
+      <section class="card" aria-labelledby="tabla-title">
+        <div class="section-header">
+          <h2 id="tabla-title">Tabla de puntos</h2>
+          <p class="section-desc">Consulta y gestiona los puntos</p>
+        </div>
+
+        <div class="grid">
+          <a class="item" href="./PUNTOS/index.html">
+            <div class="item-content">
+              <div class="item-title">Tabla de puntos</div>
+              <div class="item-desc">Resumen de puntuaciones y estado</div>
+            </div>
+            <span class="item-badge">Ir</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Controles adicionales -->
+      <section class="controls" aria-label="Controles">
+        <button class="btn" id="refreshBtn" type="button" title="Recargar esta página">Recargar</button>
+        <button class="btn ghost" id="aboutBtn" type="button" title="Acerca de este proyecto">Acerca de</button>
+      </section>
+
+      <!-- Botón Proximamente con efecto Matrix -->
+      <section class="coming-soon-section">
+        <button class="btn-coming-soon" id="matrixBtn" type="button" title="Efecto Matrix">Proximamente</button>
+      </section>
+    </main>
+
+    <!-- Canvas para efecto Matrix -->
+    <canvas id="matrixCanvas" style="display:none;"></canvas>
+
+    <footer>
+      <div class="legal">Creado por <span class="author">@samaresv juez supremo de ESR</span></div>
+      <div class="legal">Diseño: negro, blanco y canario con degradados — Página de inicio</div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

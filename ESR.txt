@@ -1,8 +1,0 @@
-ESR
-├── EXAMENES
-│   └── examen-constitucion
-│       ├── index.html
-│       ├── interact.js
-│       └── style.css
-├── LOGOS
-└── PUNTOS
