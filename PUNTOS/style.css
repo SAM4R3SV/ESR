@@ -42,6 +42,7 @@ body {
   border: 1px solid var(--border);
 }
 
+
 /* ===== HEADER ===== */
 header {
   display: flex;
@@ -387,4 +388,11 @@ footer {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: url('../logos/ESR_mainLogo.jpg') center/cover no-repeat;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }

@@ -25,13 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function handleAbout() {
     const msg = [
-      'E.S.R. — Menú de Inicio',
-      '• Estética: elegante con tipografía Playfair Display y Lato.',
-      '• Diseño responsivo: se adapta a cualquier tamaño de pantalla.',
-      '• Secciones: Exámenes y Tabla de puntos.',
-      '• Colores armoniosos: oro y tonos neutros.',
-      '',
-      'Créditos: @samaresv juez supremo de ESR'
+      'E.S.R. —  webpage oficial',
+      'Créditos: @samaresv'
     ].join('\n');
     alert(msg);
   }

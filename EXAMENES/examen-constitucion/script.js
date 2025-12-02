@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Convert and download
         try {
             await html2pdf().set(opt).from(content).save();
-            alert('PDF generado y descargado. Sugiéreles a los usuarios que te lo envíen por Discord.');
+            alert('PDF generado y descargado. Envia tus resultados por mi MD en Discord.');
         } catch (err) {
             console.error(err);
             alert('Error generando PDF: ' + (err.message || err));
@@ -191,4 +191,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return (s || 'examen').replace(/[^a-z0-9_\-\.]/ig, '_').slice(0, 120);
     }
 
+});
+
+// ==== LANGUAGE SYSTEM ====
+const langSelector = document.getElementById("langSelector");
+const langData = JSON.parse(document.getElementById("langData").innerHTML);
+
+function applyLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+
+    if (langData[lang] && langData[lang][key]) {
+      el.textContent = langData[lang][key];
+    }
+  });
+
+  localStorage.setItem("lang", lang); // remember
+}
+
+// initial load
+const savedLang = localStorage.getItem("lang") || "es";
+langSelector.value = savedLang;
+applyLanguage(savedLang);
+
+// change event
+langSelector.addEventListener("change", e => {
+  applyLanguage(e.target.value);
 });

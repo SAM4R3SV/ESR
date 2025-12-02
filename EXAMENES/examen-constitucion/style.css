@@ -13,7 +13,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -31,6 +32,8 @@ body {
   padding: 20px;
   min-height: 100vh;
 }
+
+
 
 .container {
   width: 100%;
@@ -51,18 +54,11 @@ header {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border);
 }
-
 .logo {
   width: 80px;
   height: 80px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  display: grid;
-  place-items: center;
-  color: #0a0a0a;
-  font-weight: 800;
-  font-size: 28px;
-  font-family: 'Playfair Display', serif;
+  background: url('./logos/ESR_mainLogo.jpg') center/cover no-repeat;
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2), inset 0 -4px 12px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
 }
@@ -95,7 +91,7 @@ form {
   margin-bottom: 20px;
 }
 
-.row > div {
+.row>div {
   flex: 1 1 280px;
 }
 
@@ -361,7 +357,7 @@ footer {
     gap: 12px;
   }
 
-  .row > div {
+  .row>div {
     flex: 1 1 100%;
   }
 
@@ -378,7 +374,8 @@ footer {
     gap: 10px;
   }
 
-  button.btn, button.ghost {
+  button.btn,
+  button.ghost {
     width: 100%;
   }
 }
@@ -441,7 +438,8 @@ footer {
     min-height: 80px;
   }
 
-  button.btn, button.ghost {
+  button.btn,
+  button.ghost {
     padding: 10px 20px;
     font-size: 13px;
   }
@@ -462,3 +460,4 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
